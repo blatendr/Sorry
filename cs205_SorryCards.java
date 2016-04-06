@@ -31,13 +31,13 @@ public class cs205_SorryCards{
  System.out.print(deck.size());
    }
 
-   public int draw()
+   public String draw()
      {
      int drawn = deck.get(0);
      deck.remove(0);
-     String message = getMessage(drawn);
+     String message = getLogic(drawn);
    
-       return drawn, message;
+       return message;
       }
 
 
@@ -84,5 +84,47 @@ public class cs205_SorryCards{
             }      
       return m;
       }
-
+    
+    public String getLogic(int i)
+      {
+        String m="";
+         if(i ==1)
+            {
+            m = "start1";
+            }
+         if(i ==2)
+            {
+         	m= "start2";
+            }
+         if (i==3)
+            {
+         	m= "f3";
+            }
+         if (i==4)
+            {
+            m= "b4";
+            }
+         if (i==5){
+         	m= "f5";
+            }
+         if (i==7){
+         	m= "split7";
+            }
+         if (i==8){
+         	m= "f8";
+            }
+         if (i==10){
+         	m= "f10 or b1";
+            }
+         if (i==11){
+         	m= "f11 or switch";
+            }
+         if (i==12){
+         	m= "f12";
+            }
+         if (i ==13){
+           m= "sorry";
+            }      
+      return m;
+      }
 }
